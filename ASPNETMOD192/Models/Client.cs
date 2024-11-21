@@ -10,6 +10,7 @@ namespace ASPNETMOD192.Models
         public string Name { get; set; }
 
         [Required]
+        [DataType(DataType.Date)]
         public DateOnly Birthday { get; set; }
 
         [StringLength(100)]
@@ -17,12 +18,14 @@ namespace ASPNETMOD192.Models
         public string Address{ get; set; }
 
         [Required]
+        [Display(Name = "VAT #")]
         public string VATNumber { get; set; }
 
-        public DateOnly AdmissionDate { get; set; }
+        public DateTime AdmissionDate { get; set; }
 
-        public DateOnly DeactivationDate{ get; set; }
+        public DateTime DeactivationDate{ get; set; }
 
+        [Display(Name="Cellphone")]
         public string? CellPhoneNumber { get; set; }
 
         [EmailAddress] //TODO Check me
